@@ -1,0 +1,25 @@
+{
+  "name": "ArtChessAcademy",
+  "scripts": {
+    "dev": "shadow-cljs -A:dev watch app",
+    "release": "shadow-cljs -A:dev release app"
+  },
+  "dependencies": {
+      "@emotion/react": "^11.11.1",
+      "@emotion/styled": "^11.11.0",
+      "@mui/icons-material": "^5.14.18",
+      "@mui/material": "^5.14.18",
+      "@mui/x-data-grid": "^6.15.0",
+      "@mui/x-tree-view": "^6.17.0",
+      "highlight.js": "11.5.1",
+      "lightningcss-cli": "^1.19.0",
+      "onchange": "^7.1.0",
+      "react": "^18.2.0",
+      "react-dom": "^18.2.0",
+      "react-pro-sidebar": "0.7.1",
+      "react-refresh": "^0.14.0",
+      "shadow-cljs": "2.22.9",
+      "use-sync-external-store": "^1.2.0",
+      "yup": "^1.3.2"
+    }
+}

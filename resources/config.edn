@@ -1,0 +1,6 @@
+{:db-conn-config {:dbtype    "postgresql"
+                  :host      "localhost"
+                  :port      5432
+                  :user      "postgres"
+                  :password  "postgres"
+                  :db-conn "postgresql://localhost:5432/postgres?user=postgres&password=postgres"}}
