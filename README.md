@@ -16,16 +16,3 @@ clj -J-Dclojure.server.repl="{:port 5555 :accept clojure.core.server/repl}"
 yarn dev
 ```
 
-
-
-## Reactive UI
-
-V = (f state) 
-
-# Imperative 
-
-Instruction 1
-Instruction 2
-Instruction 3
-
-Result = View
