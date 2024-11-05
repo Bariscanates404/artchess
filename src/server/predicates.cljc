@@ -85,11 +85,3 @@
 ;; (indexed-ordered-by?-fn :id {:elements {:a {:id 1}, :b {:id 2}}, :order [1 2]}) ;; => true
 ;; (indexed-ordered-by?-fn :id {:elements {:a {:id 2}, :b {:id 1}}, :order [1 2]}) ;; => false
 
-;; Predicate: Checks if a URI-like string is valid.
-(defn valid-uri? [uri-like]
-  (let [{:keys [scheme host]} (uri uri-like)]   ;; Parse the URI string into components.
-    (not (or (str/blank? scheme) (str/blank? host)))))  ;; Ensure that both scheme (e.g., "http") and host are present.
-
-;; Example:
-;; (valid-uri? "https://example.com") ;; => true
-;; (valid-uri? "invalid-uri")         ;; => false
