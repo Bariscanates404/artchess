@@ -21,8 +21,8 @@
 ;; Subscription: :db
 ;; Description: Provides the entire application state.
 (rf/reg-sub :db
-  (fn [db _]
-    db))
+            (fn [db _]
+              db))
 (comment
   (rf/subscribe [:db])
 
@@ -35,8 +35,8 @@
 
 
 (rf/reg-sub ::current-view
-  (fn [db]
-    (-> db :current-route :data :view)))
+            (fn [db]
+              (-> db :current-route :data :view)))
 
 (rf/reg-sub
   :users
@@ -72,7 +72,7 @@
   @(rf/subscribe [:editing-user])
 
   (-> @(rf/subscribe [:db])
-    :editing-user-id)
+      :editing-user-id)
 
   )
 

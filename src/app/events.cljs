@@ -45,8 +45,8 @@
                     :on-failure [:health-failed]}}))
 
 (rf/reg-event-db :app/init-db
-  (fn [db [_ initial-db]]
-    (merge db initial-db)))
+                 (fn [db [_ initial-db]]
+                   (merge db initial-db)))
 
 
 
@@ -103,17 +103,17 @@
   )
 
 (rf/reg-fx :run-fn
-  (fn [exec-fn!]
-    (exec-fn!)))
+           (fn [exec-fn!]
+             (exec-fn!)))
 
 (rf/reg-event-fx :event-set-current-view!
-  (fn [_ [_ set-current-view!]]
-    (println "set-current-view! " set-current-view!)
-    (println (type set-current-view!))
-    {:run-fn set-current-view!}))
+                 (fn [_ [_ set-current-view!]]
+                   (println "set-current-view! " set-current-view!)
+                   (println (type set-current-view!))
+                   {:run-fn set-current-view!}))
 
 (rf/reg-event-fx
   :editing-user-id
   (fn [db [_ user-id set-current-view!]]
-    {:db (assoc db :editing-user-id user-id)
-     :dispatch [:event-set-current-view! set-current-view!]}))                   ;; Set user to be edited
+    {:db       (assoc db :editing-user-id user-id)
+     :dispatch [:event-set-current-view! set-current-view!]})) ;; Set user to be edited

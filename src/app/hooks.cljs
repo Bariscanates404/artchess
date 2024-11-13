@@ -30,8 +30,8 @@
     subscribe
     get-snapshot
     get-snapshot
-    identity ;; selector, not using, just returning the value itself
-    =)) ;; value equality check)
+    identity                                                ;; selector, not using, just returning the value itself
+    =))                                                     ;; value equality check)
 
 (defn- run-reaction [^js ref]
   (let [key "__rat"

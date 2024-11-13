@@ -58,7 +58,7 @@
 
 (rf/reg-event-db
   ::navigated (fn [db [_ new-match]]
-                (let [old-match   (:current-route db)
+                (let [old-match (:current-route db)
                       controllers (rfc/apply-controllers (:controllers old-match) new-match)]
                   (js/console.log "Navigated " new-match)
                   (assoc db :current-route (assoc new-match :controllers controllers)))))

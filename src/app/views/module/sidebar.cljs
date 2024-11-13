@@ -24,11 +24,11 @@
    ])
 
 (defui app-sidebar []
-  ($ :aside {:style styles/sidebar-style}
-    ($ :nav {:style {:flex "1"}}
-      ($ :ul {:style {:listStyleType "none" :padding "0" :marginTop "20px"}}
-        (map (fn [{:keys [title nav-target] :as item}]
-               ($ :li {:key item :style styles/li-margin-style}
-                 ($ :a {:href    "#" :style styles/link-style
-                        :onClick #(rf/dispatch [::nav/push-state nav-target])} title)))
-          menu-items)))))
+       ($ :aside {:style styles/sidebar-style}
+          ($ :nav {:style {:flex "1"}}
+             ($ :ul {:style {:listStyleType "none" :padding "0" :marginTop "20px"}}
+                (map (fn [{:keys [title nav-target] :as item}]
+                       ($ :li {:key item :style styles/li-margin-style}
+                          ($ :a {:href    "#" :style styles/link-style
+                                 :onClick #(rf/dispatch [::nav/push-state nav-target])} title)))
+                     menu-items)))))

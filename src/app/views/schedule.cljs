@@ -3,13 +3,13 @@
             [re-frame.core :as rf]))
 
 (defn schedule-table-style []
-  #js {:width            "100%"
-       :borderCollapse   "collapse"})
+  #js {:width          "100%"
+       :borderCollapse "collapse"})
 
 (defn th-td-style []
-  #js {:border       "1px solid #ddd"
-       :padding      "8px"
-       :textAlign    "center"})
+  #js {:border    "1px solid #ddd"
+       :padding   "8px"
+       :textAlign "center"})
 
 (defn th-style []
   (merge (th-td-style)
@@ -44,8 +44,8 @@
                  ($ :tr {:key (str hour "-" minute) :style (when (even? hour) (even-tr-style))}
                     ($ :td {:style (th-td-style)} time-label)
                     (for [day ["Monday" "Tuesday" "Wednesday" "Thursday" "Friday" "Saturday" "Sunday"]]
-                      ($ :td {:key (str day "-" time-label)
-                              :style (if (rf/subscribe [:slot-clicked? day time-label])
-                                       (clicked-td-style)
-                                       (td-style))
+                      ($ :td {:key     (str day "-" time-label)
+                              :style   (if (rf/subscribe [:slot-clicked? day time-label])
+                                         (clicked-td-style)
+                                         (td-style))
                               :onClick #(rf/dispatch [:slot-click day time-label])}))))))))

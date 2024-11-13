@@ -41,11 +41,11 @@
                     :stop  (fn [& params] (js/console.log "Leaving admin-panel"))}]}]
 
    ["users-list"
-       {:name        :user-list
-        :view        users/user-list
-        :link-text   "user-list"
-        :controllers [{:start (fn [& params] (js/console.log "Entering user-list"))
-                       :stop  (fn [& params] (js/console.log "Leaving user-list"))}]}]
+    {:name        :user-list
+     :view        users/user-list
+     :link-text   "user-list"
+     :controllers [{:start (fn [& params] (js/console.log "Entering user-list"))
+                    :stop  (fn [& params] (js/console.log "Leaving user-list"))}]}]
 
    ["register-user"
     {:name        :register-user

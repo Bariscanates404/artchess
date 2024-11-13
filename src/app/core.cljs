@@ -18,7 +18,7 @@
 
 (defn render []
   (uix.dom/render-root ($ react/StrictMode ($ dash/app))
-    (uix.dom/create-root (js/document.getElementById "root"))))
+                       (uix.dom/create-root (js/document.getElementById "root"))))
 
 
 (def initial-users
